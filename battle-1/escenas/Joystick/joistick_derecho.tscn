@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://bfqyqwi4jb0ch"]
+
+[ext_resource type="Script" uid="uid://xeo4x3cdyg0s" path="res://escenas/Joystick/joistick_derecho.gd" id="1_cqgre"]
+[ext_resource type="Texture2D" uid="uid://bhj54rfk1njsg" path="res://animaciones/joistick.png" id="1_n600x"]
+[ext_resource type="Texture2D" uid="uid://blg14lbi28x0x" path="res://animaciones/palo.png" id="2_cqgre"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_g0jjb"]
+radius = 49.0
+
+[node name="JoistickDerecho" type="Area2D" unique_id=394510783]
+script = ExtResource("1_cqgre")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1091455057]
+position = Vector2(1, 1)
+shape = SubResource("CircleShape2D_g0jjb")
+
+[node name="Rango" type="Sprite2D" parent="." unique_id=1406417663]
+texture = ExtResource("1_n600x")
+
+[node name="Palanca" type="Sprite2D" parent="." unique_id=951789289]
+texture = ExtResource("2_cqgre")

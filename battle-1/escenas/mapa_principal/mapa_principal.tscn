@@ -1,0 +1,130 @@
+[gd_scene format=3 uid="uid://dc8njgs2r2f3w"]
+
+[ext_resource type="Texture2D" uid="uid://ccshrxq0apo8r" path="res://resuorces/mapa.png" id="1_5kk1g"]
+[ext_resource type="Script" uid="uid://bth7uc2ojyvb7" path="res://escenas/mapa_principal/mapa_principal.gd" id="1_l8ni0"]
+[ext_resource type="Texture2D" uid="uid://b7vah07w48pid" path="res://resuorces/LIMITE.png" id="3_l8ni0"]
+[ext_resource type="PackedScene" uid="uid://bhwsvw668dtpb" path="res://estructuras/casa_1.tscn" id="3_ttf4b"]
+[ext_resource type="PackedScene" uid="uid://jbgksv53bpjb" path="res://estructuras/casa_2.tscn" id="4_l8ni0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ekgb8"]
+size = Vector2(6196, 69115)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_c6424"]
+size = Vector2(106729, 3004)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ttf4b"]
+size = Vector2(6656.5, 68993)
+
+[node name="mapa principal" type="Node2D" unique_id=1753479375]
+script = ExtResource("1_l8ni0")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1084677386]
+texture_filter = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_left = -48113.0
+offset_top = -27388.0
+offset_right = 51271.0
+offset_bottom = 36924.0
+grow_vertical = 2
+texture = ExtResource("1_5kk1g")
+metadata/_edit_use_anchors_ = true
+
+[node name="limite" type="StaticBody2D" parent="." unique_id=1464229402]
+
+[node name="Sprite2D" type="Sprite2D" parent="limite" unique_id=1960986442]
+texture_filter = 1
+position = Vector2(3648.0083, 4991.9985)
+scale = Vector2(392.42404, 187.87999)
+texture = ExtResource("3_l8ni0")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="limite" unique_id=692619558]
+position = Vector2(53128, 4644)
+shape = SubResource("RectangleShape2D_ekgb8")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="limite" unique_id=378480715]
+position = Vector2(2879.5, -28450.5)
+shape = SubResource("RectangleShape2D_c6424")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="limite" unique_id=1693572288]
+position = Vector2(2870.5, 37708)
+shape = SubResource("RectangleShape2D_c6424")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="limite" unique_id=1363757960]
+position = Vector2(-47068.75, 4751.5)
+shape = SubResource("RectangleShape2D_ttf4b")
+
+[node name="casa_1" parent="." unique_id=777972647 instance=ExtResource("3_ttf4b")]
+position = Vector2(9436.999, -3850)
+
+[node name="casa_2" parent="." unique_id=2144962684 instance=ExtResource("3_ttf4b")]
+position = Vector2(-36771, -10250)
+
+[node name="casa_6" parent="." unique_id=951785382 instance=ExtResource("3_ttf4b")]
+position = Vector2(-22947, -16521.998)
+
+[node name="casa_3" parent="." unique_id=243223084 instance=ExtResource("3_ttf4b")]
+position = Vector2(43741, -11530)
+
+[node name="casa_4" parent="." unique_id=1256661513 instance=ExtResource("3_ttf4b")]
+position = Vector2(13917.001, 6134)
+
+[node name="casa_14" parent="." unique_id=245653731 instance=ExtResource("3_ttf4b")]
+position = Vector2(220.99951, 13302)
+
+[node name="casa_16" parent="." unique_id=233462163 instance=ExtResource("3_ttf4b")]
+position = Vector2(-25634.998, 23414)
+
+[node name="casa_15" parent="." unique_id=1689385224 instance=ExtResource("3_ttf4b")]
+position = Vector2(-3875.0005, -2954)
+
+[node name="casa_5" parent="." unique_id=2056658457 instance=ExtResource("3_ttf4b")]
+position = Vector2(35805, 30966)
+
+[node name="casa_18" parent="." unique_id=224106470 instance=ExtResource("3_ttf4b")]
+position = Vector2(33245, -19850)
+
+[node name="casa_7" parent="." unique_id=881884415 instance=ExtResource("4_l8ni0")]
+texture_filter = 1
+position = Vector2(-33808, -22212)
+scale = Vector2(20.493252, 28.177217)
+
+[node name="casa_9" parent="." unique_id=1039168362 instance=ExtResource("4_l8ni0")]
+texture_filter = 1
+position = Vector2(-36112, 25275.998)
+scale = Vector2(20.493252, 28.177217)
+
+[node name="casa_10" parent="." unique_id=1166146079 instance=ExtResource("4_l8ni0")]
+texture_filter = 1
+position = Vector2(-23056, 30268)
+scale = Vector2(20.493252, 28.177217)
+
+[node name="casa_11" parent="." unique_id=192147057 instance=ExtResource("4_l8ni0")]
+texture_filter = 1
+position = Vector2(-5392.001, 3644)
+scale = Vector2(20.493252, 28.177217)
+
+[node name="casa_12" parent="." unique_id=1050187336 instance=ExtResource("4_l8ni0")]
+texture_filter = 1
+position = Vector2(3824, -12868.002)
+scale = Vector2(20.493252, 28.177217)
+
+[node name="casa_13" parent="." unique_id=974854296 instance=ExtResource("4_l8ni0")]
+texture_filter = 1
+position = Vector2(11632.001, 12987.999)
+scale = Vector2(20.493252, 28.177217)
+
+[node name="casa_17" parent="." unique_id=975901242 instance=ExtResource("4_l8ni0")]
+texture_filter = 1
+position = Vector2(43248, 23100)
+scale = Vector2(20.493252, 28.177217)
+
+[node name="casa_8" parent="." unique_id=1672051963 instance=ExtResource("4_l8ni0")]
+texture_filter = 1
+position = Vector2(41712, -21572)
+scale = Vector2(20.493252, 28.177217)
+
+[node name="SpawnPoint" type="Node2D" parent="." unique_id=117325415]
+position = Vector2(-32537, 30548)
+
+[node name="HTTPRequest" type="HTTPRequest" parent="." unique_id=249080975]

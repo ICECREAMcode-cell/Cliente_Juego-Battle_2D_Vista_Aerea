@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://bye0qhejnprs8"]
+
+[ext_resource type="Texture2D" uid="uid://dfu14dnnwng2" path="res://resuorces/mon.png" id="1_jyuw3"]
+
+[node name="Node2D" type="Node2D" unique_id=461350774]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1345899112]
+texture_filter = 1
+position = Vector2(3, 22.999998)
+scale = Vector2(0.8789116, 0.81109786)
+texture = ExtResource("1_jyuw3")

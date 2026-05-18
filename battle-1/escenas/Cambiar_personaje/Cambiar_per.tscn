@@ -1,0 +1,55 @@
+[gd_scene format=3 uid="uid://djsys1vq2jorr"]
+
+[ext_resource type="Texture2D" uid="uid://dfdnkqev0esmg" path="res://resuorces/cambiar_personaje.png" id="1_3mept"]
+[ext_resource type="Script" uid="uid://b5w0vkr7isml1" path="res://escenas/Cambiar_personaje/cambiar_per.gd" id="1_u8r76"]
+[ext_resource type="PackedScene" uid="uid://bye0qhejnprs8" path="res://escenas/moneda/moneda.tscn" id="2_josqa"]
+
+[node name="Control" type="Control" unique_id=1529234359]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_u8r76")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=220221900]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0220001
+anchor_bottom = 1.029
+offset_right = -0.3441162
+offset_bottom = 0.20794678
+texture = ExtResource("1_3mept")
+metadata/_edit_use_anchors_ = true
+
+[node name="Node2D" parent="." unique_id=461350774 instance=ExtResource("2_josqa")]
+position = Vector2(507, 16)
+
+[node name="LabelMonedas" type="Label" parent="." unique_id=626406458]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.25868055
+anchor_top = 0.012679014
+anchor_right = 0.39881948
+anchor_bottom = 0.079753086
+offset_top = -0.21600151
+offset_right = 0.55996704
+offset_bottom = 0.3199997
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Button" type="Button" parent="." unique_id=455621345]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.03125
+anchor_top = 0.83179015
+anchor_right = 0.18402778
+anchor_bottom = 0.95987654
+offset_right = 8.0
+offset_bottom = 8.0
+theme_override_font_sizes/font_size = 35
+text = "VOLVER"
+metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

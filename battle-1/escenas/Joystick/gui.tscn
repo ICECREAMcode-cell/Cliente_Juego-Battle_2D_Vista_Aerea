@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://chw0isiejh3nd"]
+
+[ext_resource type="Script" uid="uid://byoxu0a6emyhn" path="res://escenas/Joystick/gui.gd" id="1_837kb"]
+[ext_resource type="PackedScene" uid="uid://bfqyqwi4jb0ch" path="res://escenas/Joystick/joistick_derecho.tscn" id="1_elc4f"]
+[ext_resource type="PackedScene" uid="uid://dwi8l6dej3pgp" path="res://escenas/Joystick/joystick.tscn" id="2_837kb"]
+
+[node name="GUI" type="CanvasLayer" unique_id=16743624]
+script = ExtResource("1_837kb")
+
+[node name="JoistickDerecho" parent="." unique_id=394510783 instance=ExtResource("1_elc4f")]
+position = Vector2(892, 478)
+
+[node name="JoistickIzquierdo" parent="." unique_id=1840725477 instance=ExtResource("2_837kb")]
+position = Vector2(257, 475)
+
+[node name="correr" type="Button" parent="." unique_id=1408826293]
+anchors_preset = -1
+anchor_left = 0.845
+anchor_top = 0.316
+anchor_right = 1.0
+anchor_bottom = 0.39400002
+offset_left = -0.44006348
+offset_top = 0.23199463
+offset_right = -23.0
+offset_bottom = -0.31201172
+grow_horizontal = 0
+grow_vertical = 2
+size_flags_horizontal = 8
+theme_override_font_sizes/font_size = 28
+text = "CORRER"
+
+[connection signal="pressed" from="correr" to="." method="_on_correr_pressed"]

@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://c50iie6bccpdd"]
+
+[ext_resource type="Script" uid="uid://dwxl4dhkouinh" path="res://escena_de_entrada.gd" id="1_sff01"]
+[ext_resource type="Texture2D" uid="uid://djhbnjd0yap0t" path="res://resuorces/pantallaprincipal.png" id="2_sff01"]
+
+[node name="Control" type="Control" unique_id=1741146358]
+layout_mode = 3
+anchor_right = 1.021
+anchor_bottom = 1.0660001
+offset_left = 1.0
+offset_top = 12.0
+offset_right = -0.1920166
+offset_bottom = 0.2319336
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_sff01")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=242068148]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_sff01")
+expand_mode = 1
+stretch_mode = 6
+metadata/_edit_use_anchors_ = true
+
+[node name="Button" type="Button" parent="." unique_id=1772518065]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.52000004
+anchor_top = 0.5
+anchor_right = 0.791
+anchor_bottom = 0.5
+offset_left = -6.1035156e-05
+offset_top = -19.5
+offset_right = 0.5750122
+offset_bottom = 25.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 27
+action_mode = 0
+text = "PRESIONE PARA INICIAR"
+metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

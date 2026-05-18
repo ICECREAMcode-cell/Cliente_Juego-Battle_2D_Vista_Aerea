@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://dwi8l6dej3pgp"]
+
+[ext_resource type="Script" uid="uid://crjy1wmi8oer4" path="res://escenas/Joystick/joystickIzquierdo.gd" id="1_ovlye"]
+[ext_resource type="Texture2D" uid="uid://bhj54rfk1njsg" path="res://animaciones/joistick.png" id="1_t6k0f"]
+[ext_resource type="Texture2D" uid="uid://blg14lbi28x0x" path="res://animaciones/palo.png" id="2_ovlye"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_t6k0f"]
+radius = 49.0
+
+[node name="JoistickIzquierdo" type="Area2D" unique_id=1840725477]
+script = ExtResource("1_ovlye")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2019316286]
+shape = SubResource("CircleShape2D_t6k0f")
+
+[node name="Rango" type="Sprite2D" parent="." unique_id=839188513]
+texture = ExtResource("1_t6k0f")
+
+[node name="Palanca" type="Sprite2D" parent="." unique_id=1768291025]
+texture = ExtResource("2_ovlye")
