@@ -1,0 +1,78 @@
+[gd_scene format=3 uid="uid://6f5rkk44vivh"]
+
+[ext_resource type="Script" uid="uid://cfkqbo0sr8e15" path="res://animaciones/caminar.gd" id="1_keyif"]
+[ext_resource type="Texture2D" uid="uid://s0exju3b6xi4" path="res://animaciones/civil-correr.png" id="1_xgb5s"]
+
+[sub_resource type="Animation" id="Animation_keyif"]
+length = 1.7666667
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.33, 0.66, 0.96666664, 1.31),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4]
+}
+
+[sub_resource type="Animation" id="Animation_7o6oa"]
+resource_name = "caminar"
+length = 2.0
+loop_mode = 1
+markers = [{
+"color": Color(1, 1, 1, 1),
+"name": &"frame1",
+"time": 0.6
+}]
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.03333334, 0.4, 0.76666665, 1.1666666, 1.5666667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_hhbk1"]
+_data = {
+&"RESET": SubResource("Animation_keyif"),
+&"caminar": SubResource("Animation_7o6oa")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7o6oa"]
+size = Vector2(117, 164)
+
+[node name="Node2D" type="CharacterBody2D" unique_id=136169529]
+script = ExtResource("1_keyif")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=564101061]
+texture_filter = 1
+position = Vector2(8, 11)
+scale = Vector2(20.58887, 10.136719)
+texture = ExtResource("1_xgb5s")
+hframes = 5
+
+[node name="caminar" type="AnimationPlayer" parent="Sprite2D" unique_id=2032126512]
+libraries/ = SubResource("AnimationLibrary_hhbk1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1258598780]
+position = Vector2(7.5, 5)
+shape = SubResource("RectangleShape2D_7o6oa")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=421635208]
+texture_filter = 1
+position = Vector2(-15, -9)
+zoom = Vector2(0.15, 0.15)
+limit_enabled = false
+limit_left = -508
+limit_top = -348
+limit_right = 644
+limit_bottom = 300
